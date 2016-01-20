@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZhihuDailyUwp", "ZhihuDailyUwp.csproj", "{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhihu.ApiLib", "..\Zhihu.ApiLib\Zhihu.ApiLib.csproj", "{95A2A995-5824-47C2-8BC8-C3DD947C0CCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZhihuDaily.ApiLib", "..\ZhihuDaily.ApiLib\ZhihuDaily.ApiLib.csproj", "{95A2A995-5824-47C2-8BC8-C3DD947C0CCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

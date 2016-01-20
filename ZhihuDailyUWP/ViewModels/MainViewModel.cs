@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight;
-using Zhihu.ApiLib;
+using ZhihuDaily.ApiLib;
 using ZhihuDailyUwp.Common;
 
 namespace ZhihuDailyUwp.ViewModels
@@ -29,7 +29,7 @@ namespace ZhihuDailyUwp.ViewModels
                     //new Scenario() {Title = "设置",ClassType = typeof(Scenario7_Settings),IconSymbol = Symbol.Repair},
                 };
             IsLoggedIn = false;
-            ZhihuWebClient client = new ZhihuWebClient();
+            ZhihuDailyWebClient client = new ZhihuDailyWebClient();
             client.Login();
         }
     }

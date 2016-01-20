@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ZhihuDailyUwp.Models
 {
     [DataContract]
-    public class User
+    public class Editor
     {
         [DataMember]
         public string Id { get; set; }
