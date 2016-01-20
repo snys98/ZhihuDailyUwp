@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SDKTemplate.Models
+namespace ZhihuDailyUwp.Models
 {
+    [DataContract]
     public class User
     {
+        [DataMember]
+        public string Id { get; set; }
+        [DataMember]
         public string UserName { get; set; }
+        [DataMember]
         public string Avatar { get; set; }
+        [DataMember]
         public string Motto { get; set; }
+        [DataMember]
         public string Introduction { get; set; }
-        public string Kindness { get; set; }
-        public string TopicCount { get; set; }
-        public string FollowedCount { get; set; }
-        public string FollowCount { get; set; }
-        public string LikeCount { get; set; }
-        public string ThankCount { get; set; }
-        public string Address { get; set; }
-        public string Profession { get; set; }
-        public string Education { get; set; }
     }
 }

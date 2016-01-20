@@ -25,7 +25,7 @@ namespace ZhihuDailyUwp.ViewModels
                     //new Scenario() {Title = "关注",ClassType = typeof(Scenario3_Follow),IconSymbol = Symbol.People},
                     //new Scenario() {Title = "收藏",ClassType = typeof(Scenario4_Favorite),IconSymbol = Symbol.Favorite},
                     //new Scenario() {Title = "草稿",ClassType = typeof(Scenario5_Draft),IconSymbol = Symbol.Edit},
-                    //new Scenario() {Title = "提问",ClassType = typeof(Scenario6_AddPost),IconSymbol = Symbol.Add},
+                    //new Scenario() {Title = "提问",ClassType = typeof(Scenario6_AddStory),IconSymbol = Symbol.Add},
                     //new Scenario() {Title = "设置",ClassType = typeof(Scenario7_Settings),IconSymbol = Symbol.Repair},
                 };
             IsLoggedIn = false;

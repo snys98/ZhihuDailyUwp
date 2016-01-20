@@ -16,9 +16,9 @@ namespace ZhihuDailyUwp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Scenario6_AddPost : Page
+    public sealed partial class Scenario6_AddStory : Page
     {
-        public Scenario6_AddPost()
+        public Scenario6_AddStory()
         {
             this.InitializeComponent();
         }
