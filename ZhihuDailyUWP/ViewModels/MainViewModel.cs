@@ -30,7 +30,6 @@ namespace ZhihuDailyUwp.ViewModels
                 };
             IsLoggedIn = false;
             ZhihuDailyWebClient client = new ZhihuDailyWebClient();
-            client.Login();
         }
     }
 }

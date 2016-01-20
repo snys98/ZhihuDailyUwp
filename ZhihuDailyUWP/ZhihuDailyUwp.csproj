@@ -240,6 +240,12 @@
     <Folder Include="Background\" />
     <Folder Include="CoustomControls\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZhihuDaily.ApiLib\ZhihuDaily.ApiLib.csproj">
+      <Project>{95a2a995-5824-47c2-8bc8-c3dd947c0ccb}</Project>
+      <Name>ZhihuDaily.ApiLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
