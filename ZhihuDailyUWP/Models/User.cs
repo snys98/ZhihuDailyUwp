@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 namespace ZhihuDailyUwp.Models
 {
     [DataContract]
-    public class Editor
+    public class User
     {
         [DataMember]
         public string Id { get; set; }
         [DataMember]
-        public string UserName { get; set; }
+        public string Name { get; set; }
         [DataMember]
         public string Avatar { get; set; }
         [DataMember]
-        public string Motto { get; set; }
+        public string Bio { get; set; }
         [DataMember]
-        public string Introduction { get; set; }
+        public string Url { get; set; }
     }
 }
