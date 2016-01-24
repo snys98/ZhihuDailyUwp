@@ -29,7 +29,7 @@ namespace ZhihuDailyUwp.ViewModels
                     //new Scenario() {Title = "设置",ClassType = typeof(Scenario7_Settings),IconSymbol = Symbol.Repair},
                 };
             IsLoggedIn = false;
-            ZhihuDailyWebClient client = new ZhihuDailyWebClient();
+            ZhihuDailyApiClient client = new ZhihuDailyApiClient();
         }
     }
 }
