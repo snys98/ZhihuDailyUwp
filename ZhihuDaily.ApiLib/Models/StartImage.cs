@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Data.Json;
 
 namespace ZhihuDailyUwp.Models
 {
@@ -14,7 +15,7 @@ namespace ZhihuDailyUwp.Models
     public class StartImage
     {
         [DataMember]
-        public string ImageURL
+        public string ImageUrl
         {
             get; set;
         }

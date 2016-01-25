@@ -108,6 +108,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiBaseService.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\LatestStories.cs" />
+    <Compile Include="Models\LatestThemeStories.cs" />
+    <Compile Include="Models\StartImage.cs" />
+    <Compile Include="Models\Story.cs" />
+    <Compile Include="Models\StoryComment.cs" />
+    <Compile Include="Models\StoryContent.cs" />
+    <Compile Include="Models\StoryExtra.cs" />
+    <Compile Include="Models\Theme.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="ZhihuDailyApiClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\ZhihuDaily.ApiLib.rd.xml" />

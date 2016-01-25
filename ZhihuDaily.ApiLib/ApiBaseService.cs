@@ -6,10 +6,10 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Data.Json;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Web.Http;
+using Newtonsoft.Json;
 using UnicodeEncoding = Windows.Storage.Streams.UnicodeEncoding;
 
 namespace ZhihuDaily.ApiLib
@@ -52,9 +52,10 @@ namespace ZhihuDaily.ApiLib
             return await httpContent.ReadAsStringAsync();
         }
 
-        internal static async Task<JsonObject> ToJsonObject(this IHttpContent httpContent)
+        internal static async Task<T> ToObject<T>(this IHttpContent httpContent) where T:class
         {
-            return JsonObject.Parse(await httpContent.ReadAsStringAsync());
+            
+            return JsonConvert.DeserializeObject<T>(await httpContent.ReadAsStringAsync());
         }
 
         internal static async Task<WriteableBitmap> ToWriteableBitmap(this IHttpContent httpContent)
