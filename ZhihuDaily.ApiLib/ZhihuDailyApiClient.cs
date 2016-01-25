@@ -31,7 +31,7 @@ namespace ZhihuDaily.ApiLib
         /// <summary>
         /// 启动图片
         /// </summary>
-        internal static string _startImageUrl = $"{BaseUrl}/start-image/{0}"; //0 图片尺寸:1920*1080
+        internal static string _startImageUrl = $"{BaseUrl}/start-image/{{0}}"; //0 图片尺寸:1920*1080
 
         /// <summary>
         /// 主题列表
@@ -46,58 +46,58 @@ namespace ZhihuDaily.ApiLib
         /// <summary>
         /// 首页分页文章（按日期）
         /// </summary>
-        internal static string _beforeStoriesUrl = $"{BaseUrl}/stories/before/{0}"; //0日期 20151209
+        internal static string _beforeStoriesUrl = $"{BaseUrl}/stories/before/{{0}}"; //0日期 20151209
 
         /// <summary>
         /// 文章内容
         /// </summary>
-        internal static string _storyContentUrl = $"{BaseUrl}/story/{0}"; //0 文章id
+        internal static string _storyContentUrl = $"{BaseUrl}/story/{{0}}"; //0 文章id
 
         /// <summary>
         /// 主题文章
         /// </summary>
-        internal static string _topicStoriesUrl = $"{BaseUrl}/theme/{0}"; //0 主题id
+        internal static string _topicStoriesUrl = $"{BaseUrl}/theme/{{0}}"; //0 主题id
 
         /// <summary>
         /// 分页获取主题文章
         /// </summary>
-        internal static string _beforeThemeStoriesUrl = $"{BaseUrl}/theme/{0}/before/{1}"; //0 主题编号 1 文章id
+        internal static string _beforeThemeStoriesUrl = $"{BaseUrl}/theme/{{0}}/before/{{1}}"; //0 主题编号 1 文章id
 
         /// <summary>
         /// 主编详细资料
         /// </summary>
-        internal static string _editorProfileUrl = $"{BaseUrl}/editor/{0}/profile-page/android"; //0 主编id
+        internal static string _editorProfileUrl = $"{BaseUrl}/editor/{{0}}/profile-page/android"; //0 主编id
 
         /// <summary>
         /// 文章额外信息（评论数、推荐数等）
         /// </summary>
-        internal static string _storyExtraUrl = $"{BaseUrl}/story-extra/{0}"; //0 文章id
+        internal static string _storyExtraUrl = $"{BaseUrl}/story-extra/{{0}}"; //0 文章id
 
         /// <summary>
         /// 文章的推荐人
         /// </summary>
-        internal static string _recommendersUrl = $"{BaseUrl}/story/{0}/recommenders"; //文章id
+        internal static string _recommendersUrl = $"{BaseUrl}/story/{{0}}/recommenders"; //文章id
 
         /// <summary>
         /// 长评论
         /// </summary>
-        internal static string _longCommentsUrl = $"{BaseUrl}/story/{0}/long-comments"; //0 文章id
+        internal static string _longCommentsUrl = $"{BaseUrl}/story/{{0}}/long-comments"; //0 文章id
 
         /// <summary>
         /// 分页获取长评论
         /// </summary>
-        internal static string _beforeLongCommentsUrl = $"{BaseUrl}/story/{0}/long-comments/before/{1}";
+        internal static string _beforeLongCommentsUrl = $"{BaseUrl}/story/{{0}}/long-comments/before/{{1}}";
             //0 文章id  1 评论id
 
         /// <summary>
         /// 短评论
         /// </summary>
-        internal static string _shortCommentsUrl = $"{BaseUrl}/story/{0}/short-comments"; //0 文章id
+        internal static string _shortCommentsUrl = $"{BaseUrl}/story/{{0}}/short-comments"; //0 文章id
 
         /// <summary>
         /// 分页获取短评论
         /// </summary>
-        internal static string _beforeShortCommentsUrl = $"{BaseUrl}/story/{0}/short-comments/before/{1}"; //0 文章id  1 评论id 
+        internal static string _beforeShortCommentsUrl = $"{BaseUrl}/story/{{0}}/short-comments/before/{{1}}"; //0 文章id  1 评论id 
 
         /// <summary>
         /// 异步获取启动闪屏图片
@@ -164,6 +164,20 @@ namespace ZhihuDaily.ApiLib
                 var httpContent = await new ApiBaseService().Get(string.Format(_beforeStoriesUrl, targetDate.ToString("yyyyMMdd")));
                 var stories = await httpContent.ToObject<List<Story>>();
                 return stories;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<StoryContent> GetStoryContentAsync(int storyId)
+        {
+            try
+            {
+                var httpContent = await new ApiBaseService().Get(string.Format(_storyContentUrl, storyId));
+                var storyContent = await httpContent.ToObject<StoryContent>();
+                return storyContent;
             }
             catch (Exception)
             {
