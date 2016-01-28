@@ -119,6 +119,7 @@
     <Compile Include="Models\StoryExtra.cs" />
     <Compile Include="Models\Theme.cs" />
     <Compile Include="Models\Editor.cs" />
+    <Compile Include="NetworkManager.cs" />
     <Compile Include="ZhihuDailyApiClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\ZhihuDaily.ApiLib.rd.xml" />

@@ -98,7 +98,7 @@ namespace ZhihuDaily.ApiLib
         /// <param name="first">屏幕分辨率的第一个,例如1920</param>
         /// <param name="second">屏幕分辨率的第二个,例如1080</param>
         /// <returns></returns>
-        [Cached("start_image.json")]
+        [Cached("start_image.json",CacheType.Image)]
         public async Task<StartImage> GetStartImageAsync(int first = 1920,int second = 1080)
         {
             try
@@ -116,7 +116,7 @@ namespace ZhihuDaily.ApiLib
         /// 获取话题列表
         /// </summary>
         /// <returns></returns>
-        [Cached("themes.json")]
+        [Cached("themes.json",CacheType.Data)]
         public async Task<List<Theme>> GetThemeListAsync()
         {
             try
