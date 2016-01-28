@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ZhihuDailyUwp.Models
+namespace ZhihuDaily.ApiLib.Models
 {
     [DataContract]
     public class StoryContent
@@ -37,7 +32,12 @@ namespace ZhihuDailyUwp.Models
             get; set;
         }
         [DataMember]
-        public string ShareURL
+        public string Share_URL
+        {
+            get; set;
+        }
+        [DataMember]
+        public string Js
         {
             get; set;
         }
@@ -56,5 +56,19 @@ namespace ZhihuDailyUwp.Models
         {
             get; set;
         }
+        [DataMember]
+        public Theme Theme
+        {
+            get; set;
+        }
+
+        public StoryType Type { get; set; }
+        public string Ga_Prefix { get; set; }
+    }
+
+    public enum StoryType
+    {
+        Type1=1,
+        Type2=2,
     }
 }

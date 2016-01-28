@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ZhihuDailyUwp.Models
+namespace ZhihuDaily.ApiLib.Models
 {
     /// <summary>
     /// 主题
@@ -33,5 +29,14 @@ namespace ZhihuDailyUwp.Models
         {
             get; set;
         }
+        public List<Story> Stories
+        {
+            get; set;
+        }
+
+        public string Background { get; set; }
+        public string Image { get; set; }
+        public Editor Editors { get; set; }
+        public string Image_Source { get; set; }
     }
 }

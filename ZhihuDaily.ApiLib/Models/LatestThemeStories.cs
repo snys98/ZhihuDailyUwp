@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ZhihuDailyUwp.Models
+namespace ZhihuDaily.ApiLib.Models
 {
     /// <summary>
     /// 主题文章
@@ -45,7 +40,7 @@ namespace ZhihuDailyUwp.Models
             get; set;
         }
         [DataMember]
-        public ObservableCollection<User> Editors
+        public ObservableCollection<Editor> Editors
         {
             get; set;
         }

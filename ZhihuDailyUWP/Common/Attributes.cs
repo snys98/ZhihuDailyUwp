@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZhihuDailyUwp.Common
 {
-    class Attributes
+    public class Attributes
     {
     }
 }
